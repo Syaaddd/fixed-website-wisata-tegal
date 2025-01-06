@@ -2,10 +2,23 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class AdminController extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('layout/backend/pages/bacend-pages');
+
+        $data = [
+            'pageTitle' => 'Dashboard'
+        ];
+        // return "Welcome to Admin Dashboard";
+        return view('backend/backend-pages', $data);
+    }
+    public function blogAdmin() 
+    {
+        $data = [
+            'pageTitle' => 'Blog'
+        ];
+        // return "Welcome to Admin Dashboard";
+        return view('backend/pages/blog', $data);
     }
 }
