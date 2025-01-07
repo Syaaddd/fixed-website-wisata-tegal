@@ -11,8 +11,10 @@
                             <div class="col-6 d-flex align-items-center">
                                 <h6 class="text-white text-capitalize ps-3">Category table</h6>
                             </div>
-                            <div class="col-6">
-                                <a class="btn bg-gradient-dark mb-0" href=""><i class="material-symbols-rounded text-sm">add</i>&nbsp;&nbsp;Add New Category</a>
+                            <div class="col-6 d-flex align-items-center">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
+                                    Add Category
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -24,31 +26,38 @@
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Category name</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">N. of sub category</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ordering</th>
                                         <th class="text-secondary opacity-7"></th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">1</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">------</p>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <h6 class="mb-0 text-sm">---------</h6>
-                                        </td>
-                                        <td class="align-middle">
-                                            <a href="" class="text-secondary font-weight-bold text-xs">
-                                                Edit
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex px-2 py-1">
+                                                        <div class="d-flex flex-column justify-content-center">
+                                                            <h6 class="mb-0 text-sm"><?= $key + 1; ?></h6>
 
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="text-xs font-weight-bold mb-0"><?= esc($row['name']); ?></p>
+
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <h6 class="mb-0 text-sm"><?= $row->sub_category_count; ?></h6> <!-- Assuming a field for sub category count -->
+                                                </td>
+                                                <td>
+                                                <p class="text-xs font-weight-bold mb-0"><?= esc($row['ordering']); ?></p>
+
+                                                </td>
+                                                <td class="align-middle">
+                                                    <a href="" class="text-secondary font-weight-bold text-xs">
+                                                        Edit
+                                                    </a>
+                                                </td>
+                                            </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -58,5 +67,5 @@
         </div>
     </div>
 
-    <?= include('modals/modals.php') ?>
+    <?php include('modals/modals.php') ?>
     <?= $this->endSection() ?>

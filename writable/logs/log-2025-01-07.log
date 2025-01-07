@@ -1,0 +1,252 @@
+ERROR - 2025-01-07 03:03:51 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_fixed-website-wisata-tegal' in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_fixed-websit...', 3306, '', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_fixed-website-wisata-tegal' in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-01-07 03:04:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	KEY `id` (`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci' at line 6 in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\website-wisata-tegal\app\Database\Migrations\2025-01-07-024333_CreateCategoryTable.php(30): CodeIgniter\Database\Forge->createTable('categories')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCategoryTable->up()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-01-07 03:04:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	KEY `id` (`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci' at line 6 in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\website-wisata-tegal\app\Database\Migrations\2025-01-07-024333_CreateCategoryTable.php(30): CodeIgniter\Database\Forge->createTable('categories')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCategoryTable->up()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-01-07 03:05:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	KEY `id` (`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci' at line 6 in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\website-wisata-tegal\app\Database\Migrations\2025-01-07-024333_CreateCategoryTable.php(30): CodeIgniter\Database\Forge->createTable('categories')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCategoryTable->up()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-01-07 03:09:22 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\website-wisata-tegal\app\Database\Migrations\2025-01-07-024333_CreateCategoryTable.php(38): CodeIgniter\Database\Forge->createTable('categories')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCategoryTable->up()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-01-07 03:09:28 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\website-wisata-tegal\app\Database\Migrations\2025-01-07-024333_CreateCategoryTable.php(38): CodeIgniter\Database\Forge->createTable('categories')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCategoryTable->up()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-01-07 03:10:32 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\website-wisata-tegal\app\Database\Migrations\2025-01-07-024333_CreateCategoryTable.php(38): CodeIgniter\Database\Forge->createTable('categories')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCategoryTable->up()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-01-07 03:19:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	KEY `id` (`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci' at line 6 in C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\website-wisata-tegal\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\website-wisata-tegal\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\website-wisata-tegal\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\website-wisata-tegal\app\Database\Migrations\2025-01-07-024333_CreateCategoryTable.php(30): CodeIgniter\Database\Forge->createTable('categories')
+#5 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCategoryTable->up()
+#6 C:\xampp\htdocs\website-wisata-tegal\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\website-wisata-tegal\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\website-wisata-tegal\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\website-wisata-tegal\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\website-wisata-tegal\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-01-07 03:53:20 --> Error: Call to a member function save() on null
+[Method: POST, Route: admin/blog]
+in APPPATH\Controllers\AdminController.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->addBlog()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\website-wisata-tegal\\public\\index.php')
+CRITICAL - 2025-01-07 04:20:50 --> ErrorException: Undefined variable $playlist
+[Method: GET, Route: admin/blog]
+in APPPATH\Views\backend\pages\blog.php on line 44.
+ 1 APPPATH\Views\backend\pages\blog.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $playlist', 'C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('backend/pages/blog', [], true)
+ 5 APPPATH\Controllers\AdminController.php(25): view('backend/pages/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->blogAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\website-wisata-tegal\\public\\index.php')
+CRITICAL - 2025-01-07 04:29:02 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: admin/blog]
+in APPPATH\Views\backend\pages\blog.php on line 35.
+ 1 APPPATH\Views\backend\pages\blog.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('backend/pages/blog', [], true)
+ 5 APPPATH\Controllers\AdminController.php(25): view('backend/pages/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->blogAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\website-wisata-tegal\\public\\index.php')
+CRITICAL - 2025-01-07 04:29:34 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: admin/blog]
+in APPPATH\Views\backend\pages\blog.php on line 35.
+ 1 APPPATH\Views\backend\pages\blog.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('backend/pages/blog', [], true)
+ 5 APPPATH\Controllers\AdminController.php(25): view('backend/pages/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->blogAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\website-wisata-tegal\\public\\index.php')
+CRITICAL - 2025-01-07 04:29:35 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: admin/blog]
+in APPPATH\Views\backend\pages\blog.php on line 35.
+ 1 APPPATH\Views\backend\pages\blog.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('backend/pages/blog', [], true)
+ 5 APPPATH\Controllers\AdminController.php(25): view('backend/pages/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->blogAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\website-wisata-tegal\\public\\index.php')
+CRITICAL - 2025-01-07 04:29:36 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: admin/blog]
+in APPPATH\Views\backend\pages\blog.php on line 35.
+ 1 APPPATH\Views\backend\pages\blog.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('backend/pages/blog', [], true)
+ 5 APPPATH\Controllers\AdminController.php(25): view('backend/pages/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->blogAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\website-wisata-tegal\\public\\index.php')
+CRITICAL - 2025-01-07 04:32:04 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: admin/blog]
+in APPPATH\Views\backend\pages\blog.php on line 35.
+ 1 APPPATH\Views\backend\pages\blog.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\website-wisata-tegal\\app\\Views\\backend\\pages\\blog.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('backend/pages/blog', [], true)
+ 5 APPPATH\Controllers\AdminController.php(25): view('backend/pages/blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->blogAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\website-wisata-tegal\\public\\index.php')

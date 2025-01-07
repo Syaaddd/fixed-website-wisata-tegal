@@ -10,7 +10,8 @@ $routes->get('/', 'Home::index');
 
 $routes->group('admin', static function($routes){
     $routes->get('dashboard', 'AdminController::index', ['as' => 'admin.dashboard']);
-    $routes->get('blog', 'AdminController::blogAdmin', ['as' => 'admin.blog']);
+    $routes->get('blog', 'AdminController::blogAdmin', ['as' => 'admin.blog']);    
+    $routes->post('blog', 'AdminController::addBlog', ['as' => 'admin.blog']);
 });
 
  

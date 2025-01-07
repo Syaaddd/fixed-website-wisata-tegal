@@ -34,6 +34,22 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
   <!-- CSS Files -->
   <link id="pagestyle" href="/backend/assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
+  <style>
+    .form-control {
+        border: 1px solid #ced4da; /* Border kontras */
+        border-radius: 4px;       /* Sudut melengkung */
+        padding: 10px;           /* Spasi dalam input */
+        font-size: 16px;         /* Ukuran font */
+        background-color: #fff;  /* Warna latar belakang */
+        color: #212529;          /* Warna teks */
+    }
+
+    .form-control:focus {
+        border-color: #80bdff;   /* Warna border saat fokus */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efek cahaya fokus */
+        outline: none;           /* Hilangkan outline default */
+    }
+</style>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
